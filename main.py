@@ -4,7 +4,7 @@ app.secret_key = "super secret key"
 
 playNum = '0'
 
-displayNum = 0
+displayNum = '0'
 
 @app.route('/')
 def hello_world():
@@ -18,14 +18,15 @@ def getting():
     })
 
 @app.route('/getNumber')
-def getting():
-    global displayNum 
+def getting1():
+    global displayNum
     return displayNum
 
-@app.route('/putNumber')
-def getting():
+@app.route('/putNumber/<id>')
+def getting2(id):
     global displayNum
-    displayNum = request.args.get("id")
+    displayNum = id
+    print(id)
     return displayNum
 
 
