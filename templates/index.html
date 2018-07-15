@@ -11,7 +11,7 @@
 
     body {
         font-family: Arial, Helvetica, sans-serif;
-        height: 800px
+        height: 800px;
     }
 
     a {
@@ -74,7 +74,7 @@
 
     .accordion:hover .accordion-item:hover .accordion-item-content,
 .accordion .accordion-item--default .accordion-item-content {
-    height: 6em;
+    height: 26em;
 }
 
 .accordion-item-content,
@@ -127,7 +127,7 @@
 
 </head>
 
-<body style="padding:15px">
+<body style="padding:0px">
 
     <div class="bitmap br3">
         <img src="https://momath.org/wp-content/themes/momath-prod/art/logo_join.gif" alt="Italian Trulli">
@@ -143,7 +143,23 @@
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
-<h1>&ensp;&ensp;The Wall Of Math</h1>
+<h1 style="font-family:Georgia"><b>&ensp;&ensp;
+
+    <span style="color:cyan">W</span>
+      <span style="color:blue">a</span>
+      <span style="color:cyan">l</span>
+        <span style="color:blue">l</span>
+        <span style="color:cyan">&ensp;</span>
+        <span style="color:cyan">o</span>
+          <span style="color:blue">f</span>
+          <span style="color:cyan">&ensp;</span>
+
+          <span style="color:cyan">M</span>
+            <span style="color:blue">a</span>
+            <span style="color:cyan">t</span>
+            <span style="color:blue">h</span>
+
+</b></h1>
       </div>
         <marquee scrollamount="10">
         <h3 id='currentPlay'> </h3>
@@ -157,10 +173,11 @@
 
 </div>
 <br>
+<div style="background-color:pink; height:800px; width:1500px">
 <br>
-
-                  <h2 align='center'>Choose a track to play</h2>
-
+<br>
+                  <h2 style="font-family:Georgia" align='center'>Choose a track to play:</h2>
+<br>
 
 
 
@@ -170,19 +187,25 @@
     <section class="accordion-item">
         <input type="radio" name="wall" value="1"> <font size="5"> &nbsp;Search for the Prime Numbers</font>
         <div class="accordion-item-content">
-          <p>Content for section 1</p>
+          <p>This algorithm repeatedly iterates through the numbers 0 to 127, checking each number against a counter, and removing any numbers that are multiples of this counter. The counter begins at 2 and goes up until the square root of 127. For efficiency, the counter is a previously found prime number, as any composite number will by default have already been removed.
+Example: The initial counter is 2, so any number that is a multiple of 2 (except 2) is removed from the list. So it is with 3, 5, 7, etc.
+</p>
+
+    <img src="https://solvemymaths.files.wordpress.com/2015/01/aokcc.png" alt="Italian Trulli" style="width:370px;height:250px">
         </div>
     </section>
     <section class="accordion-item">
         <input type="radio" name="wall" value="2"> <font size="5"> &nbsp;Display Binary Numbers</font>
         <div class="accordion-item-content">
-          <p>Content for section 2</p>
+          <p>This algorithm displays binary numbers. It does this by treating each of the 5 slat blocks (a block is 20 slats) as value 0 (moved back) or 1 (moved forward). Initially, all the slat blocks are moved back. Then, from right to left, the values of the slat blocks are modified. The first slat block represents 2^0, the second 2^1…the fifth 2^5, so the integers 0 through 32 are represented. </p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Value_of_digits_in_the_Binary_numeral_system.svg/2000px-Value_of_digits_in_the_Binary_numeral_system.svg.png" alt="Italian Trulli" style="width:370px;height:200px;background-color:white">
         </div>
     </section>
     <section  class="accordion-item">
         <input type="radio" name="wall" value="3"> <font size="5"> &nbsp;Demonstrate Bubble Sort</font>
         <div class="accordion-item-content">
-          <p>Content for section 3</p>
+          <p>This algorithm repeatedly iterates through each metal slat, the bottoms of which are set completely forward (value of 1), the tops of which are randomly assigned a position from 0 to 1. At each index, the program compares the current ‘top value’ with the next one, wiggling both slats to indicate a comparison, and switching their values if the current is larger than the next. It keeps repeating this process until the slats are organized in increasing order of position.  </p>
+          <img src="https://www.kirupa.com/sorts/images/thenumbers_moving_72.png" alt="Italian Trulli" style="width:370px;height:200px">
         </div>
     </section>
 </div>
@@ -190,6 +213,8 @@
 
 </form>
     </div>
+</div>
+
 </div>
 
 </body>
