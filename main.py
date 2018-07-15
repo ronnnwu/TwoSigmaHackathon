@@ -1,9 +1,8 @@
-from flask import Flask, session, render_template, jsonify
+from flask import Flask, session, render_template, jsonify, request
 app = Flask(__name__)
 app.secret_key = "super secret key"
 
-if session:
-    session['playNum'] = '0'
+playNum = '0'
 
 @app.route('/')
 def hello_world():
@@ -11,15 +10,17 @@ def hello_world():
 
 @app.route('/get')
 def getting():
+    global playNum
     return jsonify({
-            "id":  session.get('playNum', '0')
+            "id":  playNum
     })
 
 @app.route('/submit')
 def submit():
-    session['playNum']  = request.args.get("id")
+    global playNum
+    playNum  = request.args.get("id")
     return jsonify({
-            "id":  session['playNum']
+            "id":  playNum
     })
 
 if __name__ == '__main__':
