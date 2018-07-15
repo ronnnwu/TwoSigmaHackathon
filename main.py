@@ -4,6 +4,8 @@ app.secret_key = "super secret key"
 
 playNum = '0'
 
+displayNum = 0
+
 @app.route('/')
 def hello_world():
     return render_template('index.html')
@@ -15,6 +17,19 @@ def getting():
             "id":  playNum
     })
 
+@app.route('/getNumber')
+def getting():
+    global displayNum 
+    return displayNum
+
+@app.route('/putNumber')
+def getting():
+    global displayNum
+    displayNum = request.args.get("id")
+    return displayNum
+
+
+
 @app.route('/submit')
 def submit():
     global playNum
@@ -24,4 +39,4 @@ def submit():
     })
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8081, debug=True)
