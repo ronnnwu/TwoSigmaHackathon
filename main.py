@@ -18,11 +18,9 @@ def getting():
 @app.route('/submit')
 def submit():
     session['playNum']  = request.args.get("id")
-    print session['playNum']
     return jsonify({
             "id":  session['playNum']
     })
 
 if __name__ == '__main__':
-
     app.run(host='0.0.0.0', port=8080, debug=True)
