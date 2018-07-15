@@ -1,4 +1,4 @@
-from flask import Flask, session, render_template, jsonify, request
+from flask import Flask, session, render_template, jsonify
 app = Flask(__name__)
 app.secret_key = "super secret key"
 
